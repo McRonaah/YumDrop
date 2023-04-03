@@ -21,7 +21,8 @@ const Header = () => {
   const [{ user }, dispatch] = useStateValue();
 
   const login = async () => {
-    const { user: { refreshToken, providerData }} = await signInWithPopup(firebaseAuth, provider);
+    const { user: { refreshToken, providerData }
+  } = await signInWithPopup(firebaseAuth, provider);
    dispatch({
     type: actionType.SET_USER,
     user: providerData[0],
@@ -40,7 +41,7 @@ const Header = () => {
       <div className="hidden md:flex w-full h-full items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
           <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-bold"> City</p>
+          <p className="text-headingColor text-xl font-bold">YumDrop</p>
         </Link>
         <div className="flex items-center gap-8">
           <ul className="flex items-center gap-8">
