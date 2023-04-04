@@ -2,7 +2,7 @@ import React from 'react';
 
 import Delivery from '../img/delivery.png';
 import HeroBg from "../img/heroBg.png";
-// import { heroData } from "../utils/data";
+import { heroData } from "../utils/data";
 
 const HomeContainer = () => {
   return (
@@ -52,7 +52,7 @@ const HomeContainer = () => {
         />
 
         <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center lg:px-32  py-4 gap-4 flex-wrap">
-          {/* {
+          {
           heroData &&
             heroData.map((n) => (
               <div
@@ -77,7 +77,7 @@ const HomeContainer = () => {
                 </p>
               </div>
             ))
-            } */}
+            }
         </div>
       </div>
   </section>
