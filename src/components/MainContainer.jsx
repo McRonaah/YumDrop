@@ -14,11 +14,11 @@ const MainContainer = () => {
                  alt="bodaboda-delivery" />
           </div>
         </div>
-        <p className="text-[2.5rem] font-bold tracking-wide text-headingColor ">
+        <p className="text-[2.5rem] lg:text-[4rem] font-bold tracking-wide text-headingColor ">
           The fastest and cheapest delivery in 
-          <span className="text-orange-600 text-[3rem]">Your Estate</span>.
+          <span className="text-orange-600 text-[3rem] lg:text-[4.75rem]">Your Estate</span>.
         </p>
-        <p className="text-base text-textColor text-center md:text-left">
+        <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper sagittis velit a mollis.
            Duis convallis odio non ligula consectetur, non sodales lacus consectetur. Nullam convallis euismod
             lacinia. Donec ullamcorper augue in ipsum dapibus sagittis. Suspendisse potenti.</p>
