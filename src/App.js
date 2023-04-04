@@ -6,6 +6,22 @@ import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 
 const App = () => {
+  const [{ foodItems }, dispatch] = useStateValue();
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      // dispatch({
+        // type: actionType.SET_FOOD_ITEMS,
+        // foodItems: data,
+        console.log(data)
+      // });
+    });
+  };
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
   return (
    <AnimatePresence wait>
      <div className="w-screen h-auto flex  flex-col" >
