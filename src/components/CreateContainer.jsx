@@ -10,15 +10,15 @@ import {
 } from "react-icons/md";
 import { categories } from "../utils/data";
 import Loader from "./Loader";
-import {
-  deleteObject,
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
-import { storage } from "../firebase.config";
-import { actionType } from "../context/reducer";
-import { useStateValue } from "../context/StateProvider";
+// import {
+//   deleteObject,
+//   getDownloadURL,
+//   ref,
+//   uploadBytesResumable,
+// } from "firebase/storage";
+// import { storage } from "../firebase.config";
+// import { actionType } from "../context/reducer";
+// import { useStateValue } from "../context/StateProvider";
 
 const CreateContainer = () => {
   const [title, setTitle] = useState("");
@@ -33,55 +33,55 @@ const CreateContainer = () => {
   const [{ foodItems }, dispatch] = useStateValue();
 
   const uploadImage = (e) => {
-    setIsLoading(true);
-    const imageFile = e.target.files[0];
-    const storageRef = ref(storage, `Images/${Date.now()}-${imageFile.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, imageFile);
+    // setIsLoading(true);
+    // const imageFile = e.target.files[0];
+    // const storageRef = ref(storage, `Images/${Date.now()}-${imageFile.name}`);
+    // const uploadTask = uploadBytesResumable(storageRef, imageFile);
 
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const uploadProgress =
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      },
-      (error) => {
-        console.log(error);
-        setFields(true);
-        setMsg("Error while uploading : Try AGain 🙇");
-        setAlertStatus("danger");
-        setTimeout(() => {
-          setFields(false);
-          setIsLoading(false);
-        }, 4000);
-      },
-      () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setImageAsset(downloadURL);
-          setIsLoading(false);
-          setFields(true);
-          setMsg("Image uploaded successfully 😊");
-          setAlertStatus("success");
-          setTimeout(() => {
-            setFields(false);
-          }, 4000);
-        });
-      }
-    );
+    // uploadTask.on(
+    //   "state_changed",
+    //   (snapshot) => {
+    //     const uploadProgress =
+    //       (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //     setFields(true);
+    //     setMsg("Error while uploading : Try AGain 🙇");
+    //     setAlertStatus("danger");
+    //     setTimeout(() => {
+    //       setFields(false);
+    //       setIsLoading(false);
+    //     }, 4000);
+    //   },
+    //   () => {
+    //     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+    //       setImageAsset(downloadURL);
+    //       setIsLoading(false);
+    //       setFields(true);
+    //       setMsg("Image uploaded successfully 😊");
+    //       setAlertStatus("success");
+    //       setTimeout(() => {
+    //         setFields(false);
+    //       }, 4000);
+    //     });
+    //   }
+    // );
   };
 
   const deleteImage = () => {
-    setIsLoading(true);
-    const deleteRef = ref(storage, imageAsset);
-    deleteObject(deleteRef).then(() => {
-      setImageAsset(null);
-      setIsLoading(false);
-      setFields(true);
-      setMsg("Image deleted successfully 😊");
-      setAlertStatus("success");
-      setTimeout(() => {
-        setFields(false);
-      }, 4000);
-    });
+    // setIsLoading(true);
+    // const deleteRef = ref(storage, imageAsset);
+    // deleteObject(deleteRef).then(() => {
+    //   setImageAsset(null);
+    //   setIsLoading(false);
+    //   setFields(true);
+    //   setMsg("Image deleted successfully 😊");
+    //   setAlertStatus("success");
+    //   setTimeout(() => {
+    //     setFields(false);
+    //   }, 4000);
+    // });
   };
 
   
