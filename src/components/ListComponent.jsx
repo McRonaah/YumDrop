@@ -59,7 +59,7 @@ const ListComponent = ({ flag, data, scrollValue }) => {
                 className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
                 onClick={() => setItems([...cartItems, item])}
               >
-                <MdShoppingBasket className="text-white" />
+                <MdShoppingBasket className="text-black" />
               </motion.div>
             </div>
 
