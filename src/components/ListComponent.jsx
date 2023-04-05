@@ -23,7 +23,7 @@ const ListComponent = ({ flag, data, scrollValue }) => {
   useEffect(() => {
     listComponent.current.scrollLeft += scrollValue;
     addtocart();
-  }, [scrollValue],[addtocart]);
+  }, [scrollValue],);
 
   useEffect(() => {
   }, [items],[addtocart]);
