@@ -8,6 +8,7 @@ import { useStateValue } from "../context/StateProvider";
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import ListComponent from './ListComponent';
+import MenuComponent from './MenuComponent';
 
 const MainContainer = () => {
 
@@ -45,7 +46,7 @@ const MainContainer = () => {
         flag={true}
         data={foodItems?.filter((n) => n.category === "fruits")}
         />
-
+        <MenuComponent />
       </section>
     </div>
   );
