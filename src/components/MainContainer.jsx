@@ -4,6 +4,7 @@ import HomeContainer from './HomeContainer';
 
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import ListComponent from './ListComponent';
 
 const MainContainer = () => {
   return (
@@ -31,6 +32,11 @@ const MainContainer = () => {
             </motion.div>
           </div>
         </div>
+        <ListComponent 
+        // scrollValue={scrollValue}
+        flag={true}
+        // data={foodItems?.filter((n) => n.category === "fruits")}
+        />
 
       </section>
     </div>
