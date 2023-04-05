@@ -10,6 +10,8 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import ListComponent from './ListComponent';
 import MenuComponent from './MenuComponent';
 
+import Cart from './Cart';
+
 const MainContainer = () => {
 
   const [{ foodItems, cartShow }] = useStateValue();
@@ -47,6 +49,7 @@ const MainContainer = () => {
         data={foodItems?.filter((n) => n.category === "fruits")}
         />
         <MenuComponent />
+        <Cart />
       </section>
     </div>
   );
