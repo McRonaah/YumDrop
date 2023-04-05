@@ -214,7 +214,7 @@ const CreateContainer = () => {
                     </div>
                     <input
                       type="file"
-                      name="uploadimage"
+                      name="upload"
                       accept="image/*"
                       onChange={uploadImage}
                       className="w-0 h-0"
