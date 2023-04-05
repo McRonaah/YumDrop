@@ -6,4 +6,4 @@ export { default as Loader }  from "./Loader";
 export { default as ListComponent }  from "./ListComponent";
 export { default as MenuComponent } from "./MenuComponent";
 export { default as Cart } from "./Cart";
-
+export { default as CartItem } from "./CartItem";
