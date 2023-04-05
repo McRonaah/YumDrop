@@ -22,11 +22,11 @@ const ListComponent = ({ flag, data, scrollValue }) => {
 
   useEffect(() => {
     listComponent.current.scrollLeft += scrollValue;
-    addtocart();
-  }, [scrollValue],);
+  }, [scrollValue]);
 
   useEffect(() => {
-  }, [items],[addtocart]);
+    addtocart();
+  }, [items]);
 
   return (
     <div
