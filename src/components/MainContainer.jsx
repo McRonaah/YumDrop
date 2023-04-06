@@ -8,7 +8,6 @@ import { useStateValue } from "../context/StateProvider";
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import ListComponent from './ListComponent';
-import MenuComponent from './MenuComponent';
 
 import Cart from './Cart';
 
@@ -51,9 +50,6 @@ const MainContainer = () => {
         data={foodItems?.filter((n) => n.category === "fruits")}
       />
     </section>
-
-    <MenuComponent />
-
     {cartShow && <Cart />}
   </div>
 );
