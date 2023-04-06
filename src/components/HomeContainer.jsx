@@ -30,13 +30,16 @@ const HomeContainer = () => {
           </span>.
         </p>
 
-        <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima velit
-          eaque fugit distinctio est nam voluptatum architecto, porro iusto
-          deserunt recusandae ipsa minus eos sunt, dolores illo repellat facere
-          suscipit!
+        <p className="text-base text-neutral-900 text-center md:text-left md:w-[80%]">
+        We understand that your time is valuable, that is why we prioritize speed and affordability
+         in our delivery process.Do you need your yummy yummy delivered, 
+         BodaBoda Delivery has got you covered.
         </p>
-
+        <p className="text-base text-neutral-900 text-center md:text-left md:w-[80%]">
+          Our team of experienced delivery bodaboda riders are dedicated to ensuring that your items are delivered
+           to you in a timely and professional manner. You can trust us to handle your items with care and
+            deliver them to you safely.</p>
+            
         <button
           type="button"
           className="bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-4 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
