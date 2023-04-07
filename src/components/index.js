@@ -7,3 +7,4 @@ export { default as ListComponent }  from "./ListComponent";
 export { default as MenuComponent } from "./MenuComponent";
 export { default as Cart } from "./Cart";
 export { default as CartItem } from "./CartItem";
+export { default as About } from "./About";
