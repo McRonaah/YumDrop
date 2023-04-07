@@ -4,6 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from '../img/c7.png';
 
+const reviews = [
+    {
+      name: 'John Doe',
+      rating: 5,
+      comment: 'Amazing food and super fast delivery! Highly recommend this service!'
+    },
+    {
+      name: 'Jane Smith',
+      rating: 4,
+      comment: 'I love the variety of restaurants available on this platform. Great job!'
+    },
+    {
+      name: 'Mike Johnson',
+      rating: 5,
+      comment: 'The food was delicious and the delivery was on time. I will definitely order again!'
+    }
+  ];
 
 const About = () => {
     const [isOpen, setIsOpen] = React.useState(false);
