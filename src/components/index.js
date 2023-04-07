@@ -8,3 +8,4 @@ export { default as MenuComponent } from "./MenuComponent";
 export { default as Cart } from "./Cart";
 export { default as CartItem } from "./CartItem";
 export { default as About } from "./About";
+export { default as Services } from "./Services";

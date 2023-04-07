@@ -80,7 +80,7 @@ const Header = () => {
                <Link to="/about">About</Link>
             </li>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Service
+              <Link to="/services">Services</Link>
             </li>
           </motion.ul>
 
@@ -203,7 +203,7 @@ const Header = () => {
                   className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
-                  Service
+                  <Link to="/services">Services</Link>
                 </li>
               </ul>
 
