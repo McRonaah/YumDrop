@@ -9,8 +9,10 @@ import {
 
 const Services = () => {
   return (
-        <div className="container mx-auto px-4 py-10">
+    <div className="flex flex-col items-center justify-center h-full">
+    <div className="container mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-10">Our Services</h1>
+      
       <div className="flex flex-wrap -mx-4">
         <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
           <div className="flex items-center mb-4">
@@ -60,10 +62,83 @@ const Services = () => {
           </div>
           <p className="text-gray-600">
             We offer multiple payment options to make it easy for you to pay for
-            your food. You can pay with your credit  card, debit card, or use mobile payment apps such as Apple Pay or Google Pay. Our payment process is quick and secure, so you can enjoy your food without any worries.</p>
-</div>
-</div>
-</div>
+            your food.Our payment process is quick
+              and secure, so you can enjoy your food without any worries.</p>
+        </div>
+     </div>
+
+     <div className="max-w-sm w-full sm:max-w-md">
+        <div className="bg-white shadow-md rounded-md overflow-hidden">
+          <div className="bg-gray-700 text-white px-4 py-2 flex items-center justify-between">
+            <h2 className="text-lg font-semibold">Our Services</h2>
+            <FontAwesomeIcon icon={faUtensils} className="text-2xl" />
+          </div>
+          <div className="px-6 py-4">
+            <h3 className="text-lg font-semibold mb-4">Food Delivery</h3>
+            <div className="flex items-center mb-2">
+              <FontAwesomeIcon icon={faTruck} className="text-gray-600 mr-2" />
+              <p>Fast and reliable delivery</p>
+            </div>
+            <div className="flex items-center mb-2">
+              <FontAwesomeIcon icon={faClock} className="text-gray-600 mr-2" />
+              <p>24/7 service available</p>
+            </div>
+            {/* payment details */}
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold mb-4">Payment Details</h3>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 font-semibold mb-2"
+                  htmlFor="card-number"
+                >
+                  Card Number
+                </label>
+                <input
+                  className="appearance-none border border-gray-300 rounded-md py-2 px-3 w-full text-gray-700 leading-tight focus:outline-none focus:border-blue-500"
+                  id="card-number"
+                  type="text"
+                  placeholder="1234 5678 9012 3456"
+                />
+              </div>
+              <div className="flex flex-wrap -mx-2">
+                <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
+                  <label
+                    className="block text-gray-700 font-semibold mb-2"
+                    htmlFor="card-expiry"
+                  >
+                    Expiry Date
+                  </label>
+                  <input
+                    className="appearance-none border border-gray-300 rounded-md py-2 px-3 w-full text-gray-700 leading-tight focus:outline-none focus:border-blue-500"
+                    id="card-expiry"
+                    type="text"
+                    placeholder="MM/YY"
+                  />
+                </div>
+                <div className="w-full sm:w-1/2 px-2">
+                  <label
+                    className="block text-gray-700 font-semibold mb-2"
+                    htmlFor="card-cvv"
+                  >
+                    CVV
+                  </label>
+                  <input
+                    className="appearance-none border border-gray-300 rounded-md py-2 px-3 w-full text-gray-700 leading-tight focus:outline-none focus:border-blue-500"
+                    id="card-cvv"
+                    type="text"
+                    placeholder="123"
+                  />
+                </div>
+              </div>
+            </div>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md mt-6">
+              Place Order
+            </button>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
   );
 };
 
