@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
-import { About, CreateContainer, Header, MainContainer, Services} from './components';
+import { About, CreateContainer, Header, MainContainer, Services, Footer } from './components';
 import MenuComponent from './components/MenuComponent';
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
@@ -38,6 +38,7 @@ const App = () => {
           </Routes>
         </main>
     </div>
+    <Footer />
    </AnimatePresence>
   );
 }
