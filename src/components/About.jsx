@@ -90,10 +90,11 @@ const About = () => {
           >
             {isOpen ? 'Hide reviews' : 'Read all reviews'}
           </button>
-                </div>
-                </div>
-        </div>
-  )
-}
+      </div>
+    </div>
+  </div>
+  
+  );
+};
 
 export default About;

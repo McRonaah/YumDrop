@@ -4,7 +4,7 @@ import { faLinkedin, faTwitter, faInstagram, faFacebook } from '@fortawesome/fre
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-700 text-gray-400 py-4 rounded-lg">
+    <footer className="bg-gray-700 text-gray-400 py-4 rounded-lg lg:p-4">
     <div className="container mx-auto flex justify-between items-center">
       <div className="social-media-icons flex space-x-6">
         <a href="https://www.linkedin.com/in/ronald-kipchirchir-034983246/" target="_blank" rel="noopener noreferrer">
