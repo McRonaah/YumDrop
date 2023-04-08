@@ -20,8 +20,11 @@ const Footer = () => {
           <FontAwesomeIcon icon={faFacebook} className="text-gray-400 hover:text-white transition-all duration-300" />
         </a>
       </div>
+      <div>
+      <p>CopyRight By Ronald Kipchirchir&#169;</p>
+      </div>
       <div className="footer-text">
-        <p className="text-sm">&copy; 2023 YumDrop.  All Rights Reserved.</p>
+        <p className="text-sm">&copy; 2023 YumDrop.  All Rights Reserved &trade; inc.</p>
       </div>
     </div>
   </footer>
