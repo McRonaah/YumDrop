@@ -25,6 +25,9 @@ const reviews = [
 const About = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
+    const displayedReviews = isOpen ? reviews : reviews.slice(0, 2);
+
+
   return (
   
     <div className="flex flex-col items-center justify-center h-full">
@@ -56,37 +59,37 @@ const About = () => {
       <div className="mt-8">
         <h3 className="text-lg font-medium mb-2">What our customers are saying</h3>
         <div className="space-y-4">
-          {reviews.map((review, index) => (
-            <Transition
-              show={isOpen === index}
-              enter="transition-opacity duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-300"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-              key={index}
-            >
-              <div className="bg-white p-4 rounded-md shadow-md">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="text-gray-700 font-medium">{review.name}</h4>
-                  <div className="flex items-center">
-                    {[...Array(review.rating)].map((star, index) => (
-                <FontAwesomeIcon icon={faStar} className="text-yellow-500 mr-1" key={index} />
-                    ))}
+            {displayedReviews.map((review, index) => (
+              <Transition
+                show={isOpen === true}
+                enter="transition-opacity duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-300"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+                key={index}
+              >
+                <div className="bg-white p-4 rounded-md shadow-md">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-gray-700 font-medium">{review.name}</h4>
+                    <div className="flex items-center">
+                      {[...Array(review.rating)].map((star, index) => (
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-500 mr-1" key={index} />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-sm">{review.comment}</p>
                 </div>
-                </div>
-                <p className="text-gray-700 text-sm">{review.comment}</p>
-                </div>
-                </Transition>
-                ))}
-                </div>
-                <button
-                className="bg-yellow-500 text-white px-4 py-2 rounded-md mt-4 focus:outline-none"
-                onClick={() => setIsOpen(!isOpen)}
-                >
-                {isOpen ? 'Hide reviews' : 'Read all reviews'}
-                </button>
+              </Transition>
+            ))}
+          </div>
+          <button
+            className="bg-yellow-500 text-white px-4 py-2 rounded-md mt-4 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? 'Hide reviews' : 'Read all reviews'}
+          </button>
                 </div>
                 </div>
         </div>
