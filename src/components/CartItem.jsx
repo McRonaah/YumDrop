@@ -7,21 +7,21 @@ import { fetchCart } from "../utils/fetchLocalStorageData";
 let items = [];
 
 const CartItem = ({ item, setFlag, flag }) => {
-  const [{ cartItems }, dispatch] = useStateValue();
+  const [{ cartItem }, dispatch] = useStateValue();
   const [qty, setQty] = useState(item.qty);
 
   const cartDispatch = () => {
-    localStorage.setItem("cartItems", JSON.stringify(items));
+    localStorage.setItem("cartItem", JSON.stringify(items));
     dispatch({
       type: actionType.SET_CARTITEMS,
-      cartItems: items,
+      cartItem: items,
     });
   };
 
   const updateQty = (action, id) => {
     if (action == "add") {
       setQty(qty + 1);
-      cartItems.map((item) => {
+      cartItem.map((item) => {
         if (item.id === id) {
           item.qty += 1;
           setFlag(flag + 1);
@@ -30,12 +30,12 @@ const CartItem = ({ item, setFlag, flag }) => {
       cartDispatch();
     } else {
       if (qty == 1) {
-        items = cartItems.filter((item) => item.id !== id);
+        items = cartItem.filter((item) => item.id !== id);
         setFlag(flag + 1);
         cartDispatch();
       } else {
         setQty(qty - 1);
-        cartItems.map((item) => {
+        cartItem.map((item) => {
           if (item.id === id) {
             item.qty -= 1;
             setFlag(flag + 1);
@@ -47,7 +47,7 @@ const CartItem = ({ item, setFlag, flag }) => {
   };
 
   useEffect(() => {
-    items = cartItems;
+    items = cartItem;
   }, [qty, items]);
 
   return (
