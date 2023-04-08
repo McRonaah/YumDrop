@@ -2,12 +2,13 @@ import React from 'react';
 
 function Contact() {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap bg-blue-400 rounded ">
       <div className="w-full md:w-1/2 p-4">
         <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-        <img src="https://via.placeholder.com/300x200" alt="Contact Us" className="mb-4" />
         <p className="mb-2">We'd love to hear from you!</p>
         <p className="mb-2">Send us a message and we'll get back to you as soon as possible.</p>
+        <img src="https://via.placeholder.com/300x200" alt="Contact Us" className="mb-4" />
+
       </div>
       <div className="w-full md:w-1/2 p-4">
         <form className="bg-white rounded-lg shadow-md p-8">
@@ -26,7 +27,7 @@ function Contact() {
             <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Message</label>
+            <label htmlFor="message" className="block text-gray-700 font-bold mb-2" type="required">Message</label>
             <textarea id="message" name="message" rows="4" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray"></textarea>
           </div>
           <div className="flex justify-center">
