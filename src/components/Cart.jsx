@@ -8,10 +8,10 @@ import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 
 import EmptyCart from "../img/emptyCart.svg";
-// import CartItem from "./CartItem";
+import CartItem from "./CartItem";
 
 const Cart = () => {
-  const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
+  const [{ cartShow, cartItem, user }, dispatch] = useStateValue();
   const [flag, setFlag] = useState(1);
   const [tot, setTot] = useState(0);
 
@@ -23,9 +23,10 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    let totalPrice = cartItems.reduce(function (accumulator, item) {
+    let totalPrice = cartItem.reduce(function (accumulator, item) {
       return accumulator + item.qty * item.price;
     }, 0);
+    
     setTot(totalPrice);
     console.log(tot);
   }, [tot, flag]);
@@ -33,10 +34,10 @@ const Cart = () => {
   const clearCart = () => {
     dispatch({
       type: actionType.SET_CARTITEMS,
-      cartItems: [],
+      cartItem: [],
     });
 
-    localStorage.setItem("cartItems", JSON.stringify([]));
+    localStorage.setItem("cartItem", JSON.stringify([]));
   };
 
   return (
@@ -62,13 +63,13 @@ const Cart = () => {
       </div>
 
       {/* bottom section */}
-      {cartItems && cartItems.length > 0 ? (
+      {cartItem && cartItem.length > 0 ? (
         <div className="w-full h-full bg-cartBg rounded-t-[2rem] flex flex-col">
           {/* cart Items section */}
           <div className="w-full h-340 md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll scrollbar-none">
-            {/* {cartItems &&
-              cartItems.length > 0 &&
-              cartItems.map((item) => (
+            {cartItem &&
+              cartItem.length > 0 &&
+              cartItem.map((item) => (
                 <CartItem
                   key={item.id}
                   item={item}
@@ -76,7 +77,7 @@ const Cart = () => {
                   flag={flag}
                 />
               )
-              )}; */}
+              )};
           </div>
 
           {/* cart total section */}
