@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../img/logo.png';
+import Logo from '../img/nav-logo.jpg';
 
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md";
@@ -59,7 +59,7 @@ const Header = () => {
       {/* Large Screens */}
       <div className="hidden md:flex w-full h-full items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
+          <img src={Logo} className="w-8 h-9 object-cover rounded" alt="logo" />
           <p className="text-headingColor text-xl font-bold">YumDrop</p>
         </Link>
 
