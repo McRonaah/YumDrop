@@ -9,4 +9,5 @@ export { default as Cart } from "./Cart";
 export { default as CartItem } from "./CartItem";
 export { default as About } from "./About";
 export { default as Services } from "./Services";
+export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
