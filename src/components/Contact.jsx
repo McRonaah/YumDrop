@@ -15,20 +15,20 @@ function Contact() {
           <h2 className="text-xl font-bold mb-4">Get In Touch</h2>
           <p className="mb-4">Please fill out the form below and we'll get back to you shortly.</p>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
-            <input type="text" id="name" name="name" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" />
+            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Your Name</label>
+            <input type="text" id="name" name="name" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
-            <input type="email" id="email" name="email" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" />
+            <input type="email" id="email" name="email" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" required />
           </div>
           <div className="mb-4">
             <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">Phone Number</label>
-            <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" />
+            <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" required />
           </div>
           <div className="mb-4">
             <label htmlFor="message" className="block text-gray-700 font-bold mb-2" type="required">Message</label>
-            <textarea id="message" name="message" rows="4" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray"></textarea>
+            <textarea id="message" name="message" rows="4" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" required></textarea>
           </div>
           <div className="flex justify-center">
             <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">Submit</button>
