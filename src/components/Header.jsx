@@ -68,7 +68,7 @@ const Header = () => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
-            className="flex items-center gap-24 "
+            className="flex items-center gap-10 "
           >
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               <Link to="/">Home</Link>
@@ -77,10 +77,13 @@ const Header = () => {
             <Link to="/menu">Menu</Link>
             </li>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-               <Link to="/about">About</Link>
+               <Link to="/about">About Us</Link>
             </li>
             <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               <Link to="/services">Services</Link>
+            </li>
+            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              <Link to="/contact">Contact Us</Link>
             </li>
           </motion.ul>
 
@@ -197,13 +200,19 @@ const Header = () => {
                   className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
-                 <Link to="/about">About</Link>
+                 <Link to="/about">About Us</Link>
                 </li>
                 <li
                   className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
                   <Link to="/services">Services</Link>
+                </li>
+                <li
+                  className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                  onClick={() => setIsMenu(false)}
+                >
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
 
