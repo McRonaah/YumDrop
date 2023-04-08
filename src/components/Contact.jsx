@@ -1,14 +1,30 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 function Contact() {
   return (
-    <div className="flex flex-wrap bg-blue-400 rounded ">
+    <div className="flex flex-wrap rounded ">
       <div className="w-full md:w-1/2 p-4">
         <h2 className="text-xl font-bold mb-4">Contact Us</h2>
         <p className="mb-2">We'd love to hear from you!</p>
-        <p className="mb-2">Send us a message and we'll get back to you as soon as possible.</p>
+        <p>Don't hesitate to message us via what'sApp by clicking the icon
+            <a href="https://wa.me/+254702233145/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faWhatsapp} className="text-gray-400  hover:text-white transition-all duration-300 ml-2"  />.
+            </a>
+        </p>
+        <p>Or make a call to us on&nbsp;
+            <a href="tel:+254111310907" target="_blank" rel="noopener noreferrer" 
+            className="text-gray-400  hover:text-white transition-all duration-300"><i class="fa fa-phone"></i>+254111310907</a>
+        </p>
         <img src="https://via.placeholder.com/300x200" alt="Contact Us" className="mb-4" />
-
+        <p>Thank you for taking the time to browse through the site shot an email&nbsp;
+        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=ronaldcheruiyot342@gmail.com" target="_blank" rel="noopener noreferrer" 
+        className="text-gray-400  hover:text-white transition-all duration-300"> 
+            <i class="fa fa-envelope"></i>ronaldcheruiyot342@gmail.com</a>
+            &nbsp;and we will get back within 24 hrs.
+        </p>
       </div>
       <div className="w-full md:w-1/2 p-4">
         <form className="bg-white rounded-lg shadow-md p-8">
