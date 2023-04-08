@@ -13,7 +13,7 @@ const CartItem = ({ item, setFlag, flag }) => {
   const cartDispatch = () => {
     localStorage.setItem("cartItem", JSON.stringify(items));
     dispatch({
-      type: actionType.SET_CARTITEMS,
+      type: actionType.SET_CARTITEM,
       cartItem: items,
     });
   };

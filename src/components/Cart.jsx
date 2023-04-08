@@ -33,7 +33,7 @@ const Cart = () => {
 
   const clearCart = () => {
     dispatch({
-      type: actionType.SET_CARTITEMS,
+      type: actionType.SET_CARTITEM,
       cartItem: [],
     });
 

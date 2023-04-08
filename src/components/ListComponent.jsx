@@ -10,14 +10,14 @@ const ListComponent = ({ flag, data, scrollValue }) => {
 
   const [items, setItems] = useState([]);
 
-  const [{ cartItems }, dispatch] = useStateValue();
+  const [{ cartItem }, dispatch] = useStateValue();
 
   const addtocart = () => {
     dispatch({
-      type: actionType.SET_CARTITEMS,
-      cartItems: items,
+      type: actionType.SET_CARTITEM,
+      cartItem: items,
     });
-    localStorage.setItem("cartItems", JSON.stringify(items));
+    localStorage.setItem("cartItem", JSON.stringify(items));
   };
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const ListComponent = ({ flag, data, scrollValue }) => {
               <motion.div
                 whileTap={{ scale: 0.75 }}
                 className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
-                onClick={() => setItems([...cartItems, item])}
+                onClick={() => setItems([...cartItem, item])}
               >
                 <MdShoppingBasket className="text-black" />
               </motion.div>
