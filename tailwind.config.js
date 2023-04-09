@@ -55,6 +55,10 @@ module.exports = {
         cartItem: "#2e3033",
         cartTotal: "#343739",
       },
+      // backgroundImage: {
+      //   'hero-pattern': "url('/img/miguel-bruna-TzVN0xQhWaQ-unsplash.jpg')",
+      //   'footer-texture': "url('/img/footer-texture.png')",
+      // }
     },
   },
   plugins: [require("tailwind-scrollbar")],

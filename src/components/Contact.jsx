@@ -5,7 +5,7 @@ import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
   return (
-    <div className="flex flex-wrap rounded ">
+    <div className="flex flex-wrap rounded bg-[url('file:///home/ronald/amplification/angular/My_Profile/src/assets/images/background-images/diego-ph-fIq0tET6llw-unsplash.jpg')] bg-cover bg-no-repeat ">
       <div className="w-full md:w-1/2 p-4">
         <h2 className="text-xl font-bold mb-4">Contact Us</h2>
         <p className="mb-2">We'd love to hear from you!</p>
