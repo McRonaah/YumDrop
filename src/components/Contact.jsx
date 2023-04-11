@@ -1,22 +1,10 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import photo from "../img/WhatsApp Image 2023-04-09 at 16.26.55.jpeg";
-
+import food from "../img/images/food.jpeg";
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
-
-
-// const firebaseConfig = {
-//     apiKey: "AIzaSyDr7s7OIivPPCh6mJ7D69Pn2yT5iPpB2Ow",
-//     authDomain: "food-delivery-app-9e7fa.firebaseapp.com",
-//     databaseURL: "https://food-delivery-app-9e7fa-default-rtdb.firebaseio.com",
-//     projectId: "food-delivery-app-9e7fa",
-//     storageBucket: "food-delivery-app-9e7fa.appspot.com",
-//     messagingSenderId: "696861491754",
-//     appId: "1:696861491754:web:a468282247acbaa08c7953"
-// };
 
 firebase.initializeApp({
   apiKey: "AIzaSyDr7s7OIivPPCh6mJ7D69Pn2yT5iPpB2Ow",
@@ -78,7 +66,7 @@ function Contact() {
             <a href="tel:+254111310907" target="_blank" rel="noopener noreferrer" 
             className="text-gray-400  hover:text-white transition-all duration-300"><i class="fa fa-phone"></i>+254111310907</a>
         </p>
-        <img src={photo} alt="Contact Us" className=" h-96 w-80 mb-4 rounded " />
+        <img src={food} alt="Contact Us" className=" h-96 w-80 mb-4 rounded " />
         <p>Thank you for taking the time to browse through the site shot an email&nbsp;
         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=ronaldcheruiyot342@gmail.com" target="_blank" rel="noopener noreferrer" 
         className="text-gray-400  hover:text-white transition-all duration-300"> 
