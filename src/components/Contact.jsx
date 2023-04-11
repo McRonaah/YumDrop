@@ -57,6 +57,8 @@ function Contact() {
       })
       .then(() => {
         console.log("Data successfully written to Firestore!");
+        alert('Data submitted successfully!');
+        window.location.reload();
       })
       .catch((error) => {
         console.error("Error writing document: ", error);
