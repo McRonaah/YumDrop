@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -48,9 +47,7 @@ function Contact() {
       .then(() => {
         console.log("Data successfully written to Firestore!");
         alert('Data submitted successfully!');
-        // window.location.reload('/');
         window.location.href = 'https://6435bb28878bf630e2b6362d--candid-cuchufli-87f12f.netlify.app/'
-        // history.push('/');
       })
       .catch((error) => {
         console.error("Error writing document: ", error);
