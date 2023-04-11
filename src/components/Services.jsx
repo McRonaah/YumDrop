@@ -10,7 +10,7 @@ import {
 const Services = () => {
   return (
     <div className="flex flex-col items-center justify-center h-full">
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-2 py-4">
       <h1 className="text-3xl font-bold mb-10">Our Services</h1>
       
       <div className="flex flex-wrap -mx-4">

@@ -24,9 +24,9 @@ const HomeContainer = () => {
         </div>
 
         <p className="text-[2.5rem] lg:text-[3rem] font-bold tracking-wide text-headingColor">
-          The Fastest and cheapest Delivery in
+          This is the Fastest and the cheapest &nbsp;  
           <span className="text-orange-600 text-[3rem] lg:text-[3.5rem]">
-            Your Estate
+           Delivery
           </span>.
         </p>
 
