@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import photo from "../img/WhatsApp Image 2023-04-09 at 16.26.55.jpeg";
 
+import firebase from "firebase/app";
+import "firebase/database";
+
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    
+    const database = firebase.database();
+    database.ref("messages").push({
+      name: name,
+      email: email,
+      message: message,
+    })
+      .then(() => {
+        alert("Thank you for your message!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("An error occurred. Please try again later.");
+      });
+  }
   return (
     <div className="flex flex-wrap rounded bg-[url('file:///home/ronald/amplification/angular/My_Profile/src/assets/images/background-images/diego-ph-fIq0tET6llw-unsplash.jpg')] bg-cover bg-no-repeat">
       <div className="w-full md:w-1/2 p-4 h-1/4">
