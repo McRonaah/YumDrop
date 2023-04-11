@@ -3,37 +3,65 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import photo from "../img/WhatsApp Image 2023-04-09 at 16.26.55.jpeg";
 
-// import firebase from 'firebase';
-import { collection, addDoc } from "firebase/firestore";
-import { database } from "../firebase.config";
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyDr7s7OIivPPCh6mJ7D69Pn2yT5iPpB2Ow",
+//     authDomain: "food-delivery-app-9e7fa.firebaseapp.com",
+//     databaseURL: "https://food-delivery-app-9e7fa-default-rtdb.firebaseio.com",
+//     projectId: "food-delivery-app-9e7fa",
+//     storageBucket: "food-delivery-app-9e7fa.appspot.com",
+//     messagingSenderId: "696861491754",
+//     appId: "1:696861491754:web:a468282247acbaa08c7953"
+// };
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDr7s7OIivPPCh6mJ7D69Pn2yT5iPpB2Ow",
+    authDomain: "food-delivery-app-9e7fa.firebaseapp.com",
+    databaseURL: "https://food-delivery-app-9e7fa-default-rtdb.firebaseio.com",
+    projectId: "food-delivery-app-9e7fa",
+    storageBucket: "food-delivery-app-9e7fa.appspot.com",
+    messagingSenderId: "696861491754",
+    appId: "1:696861491754:web:a468282247acbaa08c7953"
+});
+
+const database = firebase.database();
+
 
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+  });
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    try {
-      const docRef = await addDoc(collection(database, "messages"), {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, phoneNumber, message } = formData;
+
+    database.ref("messages")
+      .push({
         name: name,
         email: email,
         phoneNumber: phoneNumber,
         message: message,
+        timestamp: Date.now(),
+      })
+      .then(() => {
+        console.log("Data successfully written to Firestore!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
       });
-      console.log("Document written with ID: ", docRef.id);
-      alert("Thank you for your message!");
-      setName("");
-      setEmail("");
-      setPhoneNumber("");
-      setMessage("");
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("An error occurred. Please try again later.");
-    }
-  }
+  };
   return (
     <div className="flex flex-wrap rounded bg-[url('https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2017/10/idea-but-no-funding.jpg')] bg-cover bg-no-repeat">
       <div className="w-full md:w-1/2 p-4 h-1/4">
@@ -63,29 +91,29 @@ function Contact() {
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Your Name</label>
             <input type="text" id="name" name="name" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" 
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+           value={formData.name}
+           onChange={handleChange}
             required/>
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
             <input type="email" id="email" name="email" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" 
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
+             value={formData.email}
+             onChange={handleChange}
             required />
           </div>
           <div className="mb-4">
             <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">Phone Number</label>
-            <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray"
-             value={phoneNumber}
-             onChange={(event) => setPhoneNumber(event.target.value)}
+            <input type="tel" id="phone" name="phoneNumber" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray"
+             value={formData.phoneNumber}
+             onChange={handleChange}
              required />
           </div>
           <div className="mb-4">
             <label htmlFor="message" className="block text-gray-700 font-bold mb-2" type="required">Message</label>
             <textarea id="message" name="message" rows="4" className="w-full px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-gray" 
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
+             value={formData.message}
+             onChange={handleChange}
             required></textarea>
           </div>
           <div className="flex justify-center">
