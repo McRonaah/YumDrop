@@ -6,19 +6,24 @@ import Image from '../img/c7.png';
 
 const reviews = [
     {
-      name: 'John Doe',
+      name: 'Grace Laura',
       rating: 5,
       comment: 'Amazing food and super fast delivery! Highly recommend this service!'
     },
     {
-      name: 'Jane Smith',
+      name: 'Geofry Nyakundi',
       rating: 4,
       comment: 'I love the variety of restaurants available on this platform. Great job!'
     },
     {
-      name: 'Mike Johnson',
+      name: 'Timothy Kibet',
       rating: 5,
       comment: 'The food was delicious and the delivery was on time. I will definitely order again!'
+    },
+    {
+      name: 'Aisha Abdikar',
+      rating: 4,
+      comment: "I've used YumDrop a several times now and while the app itself is user-friendly and the delivery process is smooth, I 've had best experiences with the actual food."
     }
   ];
 
