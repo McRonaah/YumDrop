@@ -1,7 +1,7 @@
 <h1>YumDrop</h1>
 
-<p>This is a food delivery I developed using reactjs and firebase, where I focused on allowing google
-authentication on the avatar, storing contact form data on Realtime database(firebase) and storing authenticated googles on firebase authentication.
+<p>This is a food delivery I developed using ReactJs and Firebase, where I focused on allowing google
+authentication on avatar onClick, storing contact form data on Realtime database(firebase), implementing add to cart functionality and storing authenticated googles on firebase authentication.
 </p>
 
 <h2>MVPs</h2>
