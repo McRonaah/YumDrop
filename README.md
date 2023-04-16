@@ -1,6 +1,7 @@
 <h1>YumDrop</h1>
 
-<p>YumDrop is a food delivery app designed to help users order food from their favorite restaurants and have it delivered to their doorstep. The app has the following pages:
+<p>This is a food delivery I developed using reactjs and firebase, where I focused on allowing google
+authentication on the avatar, storing contact form data on Realtime database(firebase) and storing authenticated googles on firebase authentication.
 </p>
 
 <h2>MVPs</h2>
