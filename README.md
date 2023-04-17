@@ -1,7 +1,6 @@
 <h1>YumDrop</h1>
 
-<p>This is a food delivery I developed using ReactJs and Firebase, where I focused on allowing google
-authentication on avatar onClick, storing contact form data on Realtime database(firebase), implementing add to cart functionality and storing authenticated googles on firebase authentication.
+<p>This is a food I developed utilizing ReactJs and Firebase. One of my primary objectives was to integrate Google authentication, allowing users to authenticate with a single click on the avatar. I also included functionality to store contact form data on Firebase's Realtime Database, which provides a quick and reliable way to store data in real-time. Another feature was the implementation of an "add to cart" functionality that allows users to select items and store them for later checkout. Lastly, I stored authenticated Google accounts using Firebase Authentication, which provides secure, passwordless access for users.
 </p>
 
 <h2>MVPs</h2>
