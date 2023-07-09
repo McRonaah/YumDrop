@@ -47,7 +47,7 @@ function Contact() {
       .then(() => {
         console.log("Data successfully written to Firestore!");
         alert('Data submitted successfully!');
-        window.location.href = 'https://yumdrop-food.netlify.app/'
+        window.location.href = 'https://6435bb28878bf630e2b6362d--candid-cuchufli-87f12f.netlify.app/'
       })
       .catch((error) => {
         console.error("Error writing document: ", error);
